@@ -5,6 +5,7 @@ Name: Khushi Bagora
 ### 1
 
 PartA- Advanced Python
+
 PartB- Flask development
 
 ### 2
