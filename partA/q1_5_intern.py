@@ -1,11 +1,11 @@
-## 1. Intern class
 import datetime 
 import time
 from q3_iterate_id import IterateId
-from q4_generate_certificate import GenerateCertificates
+from q4_generate_certificate import Generate_certificates
 from email_validator import validate_email
 from q5_intern_exceptions import InvalidDurationError, InvalidEmailError
 
+#2. decorator function
 def logs(func):
     def sub(self):
         print(func)
@@ -15,7 +15,9 @@ def logs(func):
 
     return sub
 
+## 1. Intern class
 class Intern:
+    ##3.self iterating ids from custom iterator
     ids = IterateId()
     iteratingIds = iter(ids)
 
@@ -28,7 +30,7 @@ class Intern:
 
     def set_email(self, email):
         try:
-            validate = validate_email(email, check_deliverability=False)
+            validate_email(email, check_deliverability=False) ##email validation
             self.email = email
         except:
             raise InvalidEmailError("Incorrect email format")
@@ -67,9 +69,9 @@ class Intern:
         time.sleep(5)
         print("todays work ....")
 
-    ## certificate generation
+##4. certificate generation function called
     def generate_certificate(self):
-        certificate = GenerateCertificates(self.name)
+        certificate = Generate_certificates(self.name)
         print(next(certificate.generate()))
 
                     

@@ -1,3 +1,4 @@
+## custom iterator for generating ids, used in intern class
 class IterateId:
     def __init__(self):
         self.id = "001"
